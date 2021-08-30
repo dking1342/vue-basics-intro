@@ -1,7 +1,8 @@
 <template>
-    <div v-show="showAddTask">
-      <AddTask @add-task="addTask" />
-    </div>
+    <AddTask 
+        @add-task="addTask" 
+        v-show="showAddTask"
+    />
     <Tasks 
       @delete-task="deleteTask" 
       :tasks="tasks" 
@@ -22,8 +23,10 @@
         data(){
             return{
                 tasks:[],
-                showAddTask:false
             }
+        },
+        props:{
+            showAddTask:Boolean
         },
         methods:{
             async addTask(task){

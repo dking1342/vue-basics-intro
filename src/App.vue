@@ -7,7 +7,9 @@
     <!-- <div v-if="showAddTask">
       <AddTask @add-task="addTask" />
     </div> -->
-    <router-view></router-view>
+    <router-view 
+      :showAddTask="showAddTask" 
+    />
    <Footer />
   </div>
 </template>
@@ -24,7 +26,6 @@
     },
     data(){
       return{
-        // tasks:[],
         showAddTask:false
       }
     },

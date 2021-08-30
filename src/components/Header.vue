@@ -2,6 +2,7 @@
     <header>
         <h1>Task Tracker</h1>
         <Button 
+            v-show="homePage"
             :text="showAddTask ? 'Close' : 'Add Text'"
             :color="showAddTask ? 'red' : 'green'"
             @btn-click="$emit('toggle-add-task')"
@@ -17,6 +18,15 @@
         name:'Header',
         components:{
             Button
+        },
+        computed:{
+            homePage(){
+                if(this.$route.path === '/'){
+                    return true
+                } else {
+                    return false
+                }
+            }
         },
         props:{
             showAddTask:Boolean

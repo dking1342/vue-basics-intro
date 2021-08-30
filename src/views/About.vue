@@ -5,7 +5,10 @@
 
 <script>
     export default {
-        name:'About'
+        name:'About',
+        props:{
+            showAddTask:Boolean
+        }
     }
 </script>
 
