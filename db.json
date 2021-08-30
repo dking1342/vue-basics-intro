@@ -15,7 +15,7 @@
     {
       "text": "go shopping",
       "day": "monday",
-      "reminder": true,
+      "reminder": false,
       "id": 3
     }
   ]
