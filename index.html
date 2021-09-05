@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>App 1</title>
+		<style>
+			.box {
+				padding: 100px 0;
+				width: 400px;
+				text-align: center;
+				background-color: #ddd;
+				margin: 20px;
+				display: inline-block;
+			}
+			section {
+				background: rgb(245, 245, 245);
+				width: 95%;
+				margin: 0 auto;
+				height: fit-content;
+				padding: 15px;
+				margin: 20px 0;
+			}
+			.img-container {
+				width: 100px;
+				height: 100px;
+			}
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: center;
+				object-position: center;
+			}
+			.fav {
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Hello Vue</h1>
+		<div id="app">
+			<section>
+				<h3>Using dynamic data</h3>
+				<!-- <h2>I am the template</h2> -->
+				<p>The Final Empire</p>
+				<p>{{ title }}</p>
+				<p>{{author}}</p>
+				<p>Age: {{age}}</p>
+				<button v-on:click="age++">Increment Age</button>
+				<button v-on:click="age--">Decrement Age</button>
+				<div @click="author = 'Data'">Change Author</div>
+				<div @click="changeTitle">Change Title</div>
+				<button @click="changeTitles('Bible')">Change Title To Bible</button>
+			</section>
+
+			<section>
+				<h3>v-if v-else</h3>
+				<div v-if="showBooks">
+					<p>{{ title }} - {{ author }} age: {{age}}</p>
+				</div>
+				<div v-else>No book here</div>
+				<button @click="toggle">
+					<span v-if="showBooks">Hide Books</span>
+					<span v-else>Show Books</span>
+				</button>
+			</section>
+
+			<section>
+				<h3>v-show</h3>
+				<div v-show="showBooks">curently showing books</div>
+			</section>
+
+			<section>
+				<h3>events</h3>
+				<div @mouseover="handleEvent($event,5)" class="box">mouse over</div>
+				<div @mouseleave="handleEvent" class="box">mouse leave</div>
+				<div @dblclick="handleEvent" class="box">double click</div>
+				<div
+					@mousemove="handleMousemove"
+					class="box"
+					:style="styleObject"
+				></div>
+			</section>
+
+			<section>
+				<div v-for="book in books" :key="book.title">
+					<h3>{{book.title}}</h3>
+					<p>Author: {{book.author}}</p>
+				</div>
+			</section>
+
+			<section>
+				<h3>HTML attribute</h3>
+				<a :href="url" target="_blank">best website</a>
+				<div v-for="book in books" :key="book.id">
+					<div class="img-container">
+						<img :src="book.img" :alt="book.title" />
+					</div>
+					<h3>{{book.title}}</h3>
+					<p>Author: {{book.author}}</p>
+				</div>
+			</section>
+
+			<section>
+				<h3>dynamic classes</h3>
+				<div v-for="book in books" :key="book.id" :class="{ fav: book.isFav}">
+					<div class="img-container">
+						<img :src="book.img" :alt="book.title" />
+					</div>
+					<h3>{{book.title}}</h3>
+					<p>Author: {{book.author}}</p>
+					<button @click="toggleFav(book.id)">Like</button>
+                    <button @click="toggleFav2(book)">Like2</button>
+                </div>
+			</section>
+
+            <section>
+                <h3>Computed property</h3>
+                <div v-for="book in filteredBooks" :key="book.id">
+                    <h3>{{book.title}}</h3>
+                    <p>Author: {{book.author}}</p>
+                </div>
+            </section>
+		</div>
+
+		<script src="https://unpkg.com/vue@3.0.2"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
