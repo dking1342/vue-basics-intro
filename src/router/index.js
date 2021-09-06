@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 import Timer from "../views/Timer.vue";
+import Register from "../views/Register.vue";
 
 const routes = [
   {
@@ -19,6 +20,11 @@ const routes = [
     name: "Timer",
     component: Timer,
   },
+  {
+    path: "/register",
+    name: "Register",
+    component: Register,
+  }
 ];
 
 const router = createRouter({
