@@ -1,24 +1,16 @@
 # vue-crash
 
-## Project setup
-```
-yarn install
-```
+## Branch - main
+This is a task tracker
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Branch - vue-crash-2
+This is a 
 
-### Compiles and minifies for production
-```
-yarn build
-```
+## Branch - vue-crash-3
+This is a intro into using Vue with a CDN
 
-### Lints and fixes files
-```
-yarn lint
-```
+## Branch - vue-crash-4
+This is a adopt a pet app with router, vuex and multiple pages
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Branch - vue-crash-6
+This is a variety of exercise. One is a timer then a form
