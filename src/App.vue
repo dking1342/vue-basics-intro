@@ -3,10 +3,32 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/timer">Timer</router-link> |
-    <router-link to="/register">Register</router-link>
+    <router-link to="/register">Register</router-link> |
+    <router-link :to="{ name: 'Jobs' }">Job</router-link> |
+    <router-link :to="{ name: 'Animals' }">Animals</router-link>
   </div>
+  <button @click="back">Back</button>
+  <button @click="forward">Forward</button>
+  <button @click="redirect">Redirect</button>
   <router-view />
 </template>
+
+<script>
+export default {
+  name: "App",
+  methods: {
+    back() {
+      this.$router.go(-1);
+    },
+    forward() {
+      this.$router.go(1);
+    },
+    redirect() {
+      this.$router.push("/");
+    },
+  },
+};
+</script>
 
 <style lang="scss">
 #app,

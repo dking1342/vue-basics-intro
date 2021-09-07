@@ -1,0 +1,28 @@
+{
+  "animals": [
+    {
+      "id": 1,
+      "animal": "Dog",
+      "breed": "lab",
+      "hasWings": false
+    },
+    {
+      "id": 2,
+      "animal": "Cat",
+      "breed": "meagle",
+      "hasWings": false
+    },
+    {
+      "id": 3,
+      "animal": "Bird",
+      "breed": "eagle",
+      "hasWings": true
+    },
+    {
+      "id": 967687,
+      "animal": "seal",
+      "breed": "otter",
+      "hasWings": false
+    }
+  ]
+}
