@@ -5,7 +5,9 @@
     <router-link to="/timer">Timer</router-link> |
     <router-link to="/register">Register</router-link> |
     <router-link :to="{ name: 'Jobs' }">Job</router-link> |
-    <router-link :to="{ name: 'Animals' }">Animals</router-link>
+    <router-link :to="{ name: 'Animals' }">Animals</router-link> |
+    <router-link :to="{ name: 'Refs' }">Refs</router-link> |
+    <router-link :to="{ name: 'Blog' }">Blog</router-link>
   </div>
   <button @click="back">Back</button>
   <button @click="forward">Forward</button>
@@ -31,6 +33,11 @@ export default {
 </script>
 
 <style lang="scss">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 #app,
 .modals {
   font-family: Avenir, Helvetica, Arial, sans-serif;
