@@ -12,5 +12,8 @@ This is a intro into using Vue with a CDN
 ## Branch - vue-crash-4
 This is a adopt a pet app with router, vuex and multiple pages
 
+## Branch - vue-crash-5
+This is an example of vue using typescript via a simple list
+
 ## Branch - vue-crash-6
 This is a variety of exercise. One is a timer then a form
